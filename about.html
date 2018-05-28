@@ -1,18 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="about.css">
+    <title>Bike Shop/About Us</title>
 </head>
 
 <body>
-    <h3>Наши координаты</h3>
-    <div id="map"></div>
+    <header>
+        <div class="logo">
+            <img src="Moy-Bike-2-768x676.png" height="100" width="150" alt="">
+        </div>
+
+    </header>
+    <div class="wrapper">
+        <main>
+            <!-- <h2>About Us</h2> -->
+            <div id="map"></div>
+        </main>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        Home 
+                    </a>
+
+                </li>
+                <li>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                </li>
+                <li>
+
+                    <a href="contacts.html">
+                        Contacts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <form>
+                <input type="search" name="search" value="" placeholder="search">
+                <input type="date" name="date" id="">
+            </form>
+        </aside>
+    </div>
+
+    <footer>
+        <span>&copy;2017 JOHN DOE ALL RIGHTS RESERVED</span>
+    </footer>
+
     <script>
         function initMap() {
             var uluru = {
