@@ -315,7 +315,7 @@ a:hover .card {
     width: 95%;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:840px) {
     main a {
         width: calc(100% - 30px);
     }
@@ -332,12 +332,12 @@ a:hover .card {
         padding-left: 0;
     }
     aside {
-        flex: 1 1 120px;
+        flex: 1 1 300px;
         justify-content: center;
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:840px) {
     main a {
         width: calc(100% - 30px);
     }
@@ -348,7 +348,7 @@ a:hover .card {
         flex-basis: 200px;
     }
     aside {
-        flex-basis: 200px;
+        flex-basis: 310px;
     }
     html,
     body {

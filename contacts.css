@@ -326,7 +326,7 @@ form input {
     font-size: 16px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:840px) {
     main a {
         width: calc(100% - 30px);
     }
@@ -343,12 +343,12 @@ form input {
         padding-left: 0;
     }
     aside {
-        flex: 1 1 120px;
+        flex: 1 1 300px;
         justify-content: center;
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:840px) {
     html,
     body {
         height: 100vh;
@@ -363,7 +363,7 @@ form input {
         flex-basis: 200px;
     }
     aside {
-        flex-basis: 200px;
+        width: 310px;
     }
 }
 
