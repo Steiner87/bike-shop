@@ -14,6 +14,16 @@
             $("#datepicker").datepicker();
         });
     </script>
+    <script>
+        $(function() {
+            var availableTags = [
+                "Avanti", "Centurion", "Giant", "Jamis", "Kona", "Muddy Fox", "Merida", "Intense", "Scott", "Ideal", "Poison", "Yeti", "Turner", "Trek", "Syncros", "Merlin"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
 
     <link rel="stylesheet" href="contacts.css">
     <title>Bike Shop/Contacts</title>
@@ -75,7 +85,10 @@
         </nav>
         <aside>
             <form>
-                <input type="search" name="search" value="" placeholder="search">
+                <div class="ui-widget">
+                    <label for="tags">Tags: </label>
+                    <input id="tags">
+                </div>
                 <!-- Date: -->
                 <div id="datepicker"></div>
 
