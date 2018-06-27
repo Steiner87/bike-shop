@@ -5,20 +5,29 @@ body {
     justify-content: space-between;
 }
 
+.fb_login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
 a {
     text-decoration: none;
     color: #464646;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
+main input {
+    height: 30px;
 }
 
-form input {
-    margin: 10px 0;
-    font-size: 16px;
+.name,
+.email,
+.message,
+.send {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 
 header,
@@ -40,7 +49,10 @@ footer {
 }
 
 main {
+    display: flex;
+    justify-content: center;
     flex: 1;
+    /* display: flex; */
 }
 
 nav {
@@ -64,6 +76,10 @@ nav ul li {
 
 aside {
     display: flex;
+}
+
+aside input {
+    margin: 10px 0;
 }
 
 
@@ -306,6 +322,17 @@ a:hover .card {
     padding: 0;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+form input {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
 @media screen and (max-width:840px) {
     main a {
         width: calc(100% - 30px);
@@ -326,12 +353,13 @@ a:hover .card {
         flex: 1 1 300px;
         justify-content: center;
     }
-    .description {
-        max-width: 45%;
-    }
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:840px) {
+    html,
+    body {
+        height: 100vh;
+    }
     main a {
         width: calc(100% - 30px);
     }
@@ -339,22 +367,15 @@ a:hover .card {
         justify-content: space-between;
     }
     nav {
-        width: 200px;
+        flex-basis: 200px;
     }
     aside {
         width: 310px;
     }
 }
 
-@media screen and (min-width:1236px) {
+@media screen and (min-width:992px) {
     main a {
         width: calc(50% - 30px);
     }
 }
-
-
-/* @media screen and (min-width:1236px) {
-    main a {
-        width: calc(50% - 30px);
-    }
-} */
