@@ -5,6 +5,11 @@ body {
     justify-content: space-between;
 }
 
+button {
+    margin-top: 10px;
+    float: right;
+}
+
 .fb_login {
     position: absolute;
     top: 0;
