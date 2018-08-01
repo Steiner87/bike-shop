@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="orderpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <script src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.leters_only').mask();
+            $('.date').mask('00/00', {
+                placeholder: "__/__",
+                clearIfNotMatch: true
+            });
+            $('.card_number').mask('0000 0000 0000 0000', {
+                placeholder: "____ ____ ____ ____",
+                clearIfNotMatch: true
+            });
+            $('.phone').mask('(000)-0000000', {
+                placeholder: "(000)-0000000",
+                clearIfNotMatch: true
+            });
+            $('.cvv').mask('000', {
+                placeholder: "000",
+                clearIfNotMatch: true
+            });
+            $('.zip').mask('00000', {
+                placeholder: "00000",
+                clearIfNotMatch: true
+            });
+
+
+
+
+            $('.clear-if-not-match').mask("00/00/0000", {
+                clearIfNotMatch: true
+            });
+            $('.placeholder').mask("00/00/0000", {
+                placeholder: "__/__/____"
+            });
+            $('.fallback').mask("00r00r0000", {
+                translation: {
+                    'r': {
+                        pattern: /[\/]/,
+                        fallback: '/'
+                    },
+                    placeholder: "__/__/____"
+                }
+            });
+            $('.selectonfocus').mask("00/00/0000", {
+                selectOnFocus: true
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form id='formWithValidation' action="result.html" method="post">
+        <fieldset>
+            <legend>Order</legend>
+            <fieldset>
+                <legend>Choose model of bike</legend>
+                <div>
+                    <select class="field" name="bike" id="bike">
+                        <option value="" selected disabled>Select Brend</option>
+                        <option value="Avanti">Avanti</option>
+                        <option value="Kona">Kona</option>
+                        <option value="Fox">Fox</option>
+                        <option value="Muddy">Muddy</option>
+                        <option value="Merida">Merida</option>
+                        <option value="Intense">Intense</option>
+                        <option value="Jamis">Jamis</option>
+                        <option value="Giant">Giant</option>
+                        <option value="Scott">Scott</option>
+                        <option value="Ideal">Ideal</option>
+                        <option value="Poison">Poison</option>
+                        <option value="Yeti">Yeti</option>
+                        <option value="Turner">Turner</option>
+                        <option value="Trek">Trek</option>
+                        <option value="Syncros">Syncros</option>
+                        <option value="Centurion">Centurion</option>
+                        <option value="Merlin">Merlin</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    Message:
+                </div>
+                <!-- Не обязательное поле -->
+                <div>
+                    <textarea id="message"></textarea>
+                </div>
+                <!-- Не обязательное поле -->
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Billing address</legend>
+
+                <div>
+                    <label for="firstName
+                    ">First Name:</label>
+                </div>
+                <div><input class="field" type="text" name="firstName" id="firstName" maxlength="15"></div>
+
+                <div><label for="lastName">Last Name:</label></div>
+                <div><input class="field" type="text" name="lastName" id="lastName" maxlength="15"></div>
+
+                <div>
+                    <label for="streetAddress">Street Address: </label>
+                </div>
+
+                <div>
+                    <input class="field" type="text" name="streetAddress" id="streetAddress" maxlength="20">
+                </div>
+
+
+                <div>
+                    <select class="field" name="" id="region">
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="USA">USA</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Ukraine">Ukraine</option>
+                    </select>
+                </div>
+
+                <div><label for="zip">Zip: </label></div>
+                <div><input class="field zip" type="text" name="zip" maxlength="5" id="zip"></div>
+
+                <div><label for="phone">Phone:  </label></div>
+                <div><input class="field phone" type="text" name="phone" id="phone"></div>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Delivery Address</legend>
+
+                <div>
+                    <label for="firstName2
+                    ">First Name:</label>
+                </div>
+
+                <div><input class="field delivery" type="text" name="firstName2" id="firstName2"></div>
+
+                <div>
+                    <label for="lastName2">Last Name:
+                    </label>
+                </div>
+                <div><input class="field delivery" type="text" name="lastName2" id="lastName2"></div>
+
+                <div><label for="streetAddress2">Street Address: </label></div>
+                <div><input class="field delivery" type="text" name="streetAddress2" id="streetAddress2"></div>
+
+                <div>
+                    <select class="field delivery" name="region2" id="region2">
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="USA">USA</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Ukraine">Ukraine</option>
+                    </select>
+                </div>
+
+                <div><label for="zip2">Zip:</label></div>
+                <div><input class="field delivery zip" type="text" name="zip2" id="zip2" maxlength="5"></div>
+
+                <div><label for="phone2">Phone:  </label></div>
+                <div><input class="field delivery phone" type="text" name="phone2" id="phone2"></div>
+
+                <label for="sameAddress"><input type="checkbox" name="sameAddress" id="sameAddress" onchange=" return checkDeliveryAddress();" >Same as Billing address </label>
+
+
+            </fieldset>
+            <fieldset>
+                <legend> Delivery Date</legend>
+
+
+
+                <select id="yeardropdown" class="field">
+                    <option value="" selected disabled>Year</option>
+                </select>
+                <select id="monthdropdown" class="field"><option value="" selected disabled>Month</option></select>
+                <select id="daydropdown" class="field"><option value="" selected disabled>Day</option></select>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Payment</legend>
+
+                <div class="cards">
+
+                    <div>
+                        <input class="cardtype" value="mastercard" type="radio" name="cardtype">
+                        <label>MasterCard</label>
+                    </div>
+
+                    <div>
+                        <input class="cardtype field" value="visa" type="radio" name="cardtype">
+                        <label>Visa</label>
+                    </div>
+
+                </div>
+
+                <div><label>Enter Card Number:</label></div>
+                <div><input class="field card_number" type="text" id="cardNum" maxlength="16"></div>
+
+                <!-- <div>Expiration:</div> -->
+                <label for="cc">Expiration Date:</label>
+                <!-- Set via HTML -->
+                <input id="expiration" type="text" class="field date" />
+                </div>
+
+
+                <div><label>CVV:</label></div>
+                <div><input class="field cvv" type="text" id="cvv"></div>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Create account?</legend>
+
+                <div><label for="">Username:</label></div>
+                <div><input class="registration field" type="text" id="userName"></div>
+
+                <div><label for="">Password:</label></div>
+                <div><input class="registration field" type="password" id="pswd"></div>
+
+                <div><label for="">Confirm Password:</label></div>
+                <div><input class="registration field" type="password" id="pswdConfirm"></div>
+
+            </fieldset>
+
+            <!-- <input type="button" id="submit-btn" value="Отправить" onclick="call()" /> -->
+            <input type='submit' id='validateBtn' value='Validate' />
+        </fieldset>
+    </form>
+    <script src="js/lib.js"></script>
+    <script src="js/ajax.js"></script>
+
+</body>
+
+</html>
