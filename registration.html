@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="registration.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- <script>
+    <link rel="stylesheet" href="registration.css">
+    <script>
         $(function() {
             $("#datepicker").datepicker();
         });
-    </script> -->
+    </script>
     <script>
         $(function() {
             var availableTags = [
@@ -154,10 +154,7 @@
         the JavaScript SDK to present a graphical Login button that triggers
         the FB.login() function when clicked.
       -->
-    <div class="fb_login">
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-        </fb:login-button>
-    </div>
+
 
 
     <div id="status">
@@ -206,7 +203,16 @@
                     </fieldset>
 
 
-                    <button type="submit">Send</button>
+                    <button type="submit">Register by email</button>
+                    <div id="or">
+                        OR
+                    </div>
+                    <div class="fb_login">
+                        <fb:login-button size="xlarge" onlogin="Log.info('onlogin callback')">
+                            Sing Up with fb
+                        </fb:login-button>
+
+                    </div>
 
                 </fieldset>
             </form>

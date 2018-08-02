@@ -62,6 +62,7 @@ function formValid() {
 
     localStorage.setItem('user', JSON.stringify(user));
     form.submit();
+
 }
 
 
