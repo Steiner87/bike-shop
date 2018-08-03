@@ -5,6 +5,11 @@ body {
     justify-content: space-between;
 }
 
+.my-datepicker.my-datepicker_calendar {
+    width: 100%;
+    height: 330px;
+}
+
 a {
     text-decoration: none;
     color: #464646;

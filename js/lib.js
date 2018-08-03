@@ -271,15 +271,21 @@ phone2.onblur = function() {
 var cardtype = document.getElementsByClassName("cardtype");
 var cards = document.querySelector('.cards');
 
-cardtype[0].onblur = function() {
+cardtype[0].onchange = function() {
     if (cardtype[0].value) {
+
+        removeValidation2(cards);
         cards.classList.add("success");
+
+
         return false;
     }
 }
-cardtype[1].onblur = function() {
+cardtype[1].onchange = function() {
     if (cardtype[0].value) {
+        removeValidation2(cards);
         cards.classList.add("success");
+
         return false;
     }
 }

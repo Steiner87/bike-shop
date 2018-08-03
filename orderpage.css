@@ -1,7 +1,6 @@
 form {
     display: flex;
-    /* flex-direction: column; */
-    /* width: 200px; */
+    flex-direction: column;
 }
 
 input,
@@ -9,9 +8,6 @@ textarea,
 select {
     margin-bottom: 10px;
 }
-
-#yearExp,
-#monthExp {}
 
 fieldset {
     display: flex;
@@ -30,21 +26,172 @@ fieldset {
     border-bottom: 2px solid red;
 }
 
+html,
 body {
-    margin: 0;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#or {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fb_login {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #464646;
+}
+
+main input {
+    height: 30px;
+}
+
+.name,
+.email,
+.message,
+.send {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+header,
+footer {
+    height: 100px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    vertical-align: bottom;
 }
 
 .wrapper {
-    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex: 1;
+    /* display: flex; */
+}
+
+nav {
+    order: -1;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+aside {
+    display: flex;
+}
+
+aside input {
+    margin: 10px 0;
 }
 
 
-/* input,
-textarea {
-    margin: 10px auto;
-    width: 100%;
-} */
+/* main page */
+
+main ul,
+.description,
+.old-price,
+.amazon {
+    font-family: 'Roboto', sans-serif;
+    color: #878787;
+}
+
+.prices {
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #d8d8d8;
+}
+
+.top-deal .prices {
+    padding-bottom: 5px;
+}
+
+.top-deal ul {
+    margin-top: 18px;
+    border-top: 2px dotted #d8d8d8;
+}
+
+.top-deal .description {
+    padding-top: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width:840px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav {
+        flex-basis: 50px;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 0;
+    }
+    aside {
+        flex: 1 1 300px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:840px) {
+    main a {
+        width: calc(100% - 30px);
+    }
+    .wrapper {
+        justify-content: space-between;
+    }
+    nav {
+        flex-basis: 200px;
+    }
+    aside {
+        width: 310px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    main a {
+        width: calc(50% - 30px);
+    }
+}
